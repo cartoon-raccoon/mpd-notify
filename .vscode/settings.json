@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.compilerArgs": [
+        "-Iinclude",
+        "-Wall"
+    ],
+    "C_Cpp.default.compileCommands": "builddir/compile_commands.json"
+}
