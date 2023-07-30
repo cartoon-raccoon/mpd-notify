@@ -3,5 +3,8 @@
         "-Iinclude",
         "-Wall"
     ],
-    "C_Cpp.default.compileCommands": "builddir/compile_commands.json"
+    "C_Cpp.default.compileCommands": "builddir/compile_commands.json",
+    "clangd.arguments": [
+        "--compile-commands-dir=./builddir/"
+    ]
 }
