@@ -5,7 +5,8 @@ includes = include_directories('include')
 
 srcdir = 'src'
 plainfiles = [
-    'mpdnotify.cpp'
+    'mpdnotify.cpp',
+    'main.cpp',
 ]
 
 # add the source dir to each
@@ -14,6 +15,12 @@ foreach f : plainfiles
     srcfiles += [srcdir / f]
 endforeach
 
+# the main mpdnofity executable
 executable('mpdnotify', srcfiles, 
     dependencies: deps, 
+    include_directories: includes)
+
+# the test mpd async executable
+executable('mpdasync', 'src/mpdasync.cpp',
+    dependencies: deps,
     include_directories: includes)
